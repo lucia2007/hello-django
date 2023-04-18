@@ -32,7 +32,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS: typing.List[str] = []
+# ALLOWED_HOSTS: typing.List[str] = []
+ALLOWED_HOSTS = ['django-todo-app-lu.herokuapp.com', 'localhost', '8000-lucia2007-hello-django-ktpisiwpit.us2.codeanyapp.com']
 
 
 # Application definition
@@ -89,8 +90,9 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgres://xuueexaa:8Rm4m8vUhBF014R-s0POR5gS4HshBbVx@trumpet.db.elephantsql.com/xuueexaa"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
